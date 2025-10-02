@@ -13,7 +13,7 @@
   border-radius: 25%;
   background: #f0f0f0;
   position: absolute;
-  top: 50%;
+  top: calc(50% + 40px);
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -42,7 +42,7 @@
   border-radius: 50%;
   background: greenyellow;
   position: absolute;
-  top: 100px;
+  top: 150px;
   z-index: -5;
 }
 
@@ -111,10 +111,10 @@
 
 .robot-hair-style {
   position: absolute;
-  top: 80px;
+  top: 120px;
   left: 50%;
   transform: translateX(-50%);
-  white-space: nowrap;
+  white-space: nowrap; /* ty for existing */
   z-index: 10;
 }
 
