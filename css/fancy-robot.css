@@ -28,36 +28,39 @@
   top: 120px;
 }
 .robot-eye-left {
-    left: 90px;
+  left: 90px;
 }
 
 .robot-eye-right {
-    right: 90px;
+  right: 90px;
 }
 
 .robot-ear-left,
 .robot-ear-right {
   width: 60px;
   height: 120px;
+  border-radius: 50%;
   background: greenyellow;
   position: absolute;
-  top: 70px;
+  top: 100px;
+  z-index: -5;
 }
 
 .robot-ear-left {
-  left: 0px;
-  transform: rotate(-15deg);
+  left: 300px;
+  transform: rotate(-50deg);
 }
 
 .robot-ear-right {
-    right: 0px;
-    transform: rotate(15deg);
+  right: 300px;
+  transform: rotate(50deg);
 }
 
 .robot-nose {
   width: 60px;
   height: 120px;
-  background: url("../assets/images/fancy-robot-solved-example.png") no-repeat center/cover;
+  background: url("../assets/images/fancy-robot-solved-example.png") no-repeat
+    center/cover;
   border-radius: 40% / 60%;
   position: absolute;
   top: 215px;
@@ -66,32 +69,36 @@
   opacity: 0.8;
 }
 
-.robot-mouth {
-  width: 40%;
-  height: 20%;
-  background: #ff6b6b;
-  border-radius: 0 0 50% 50%;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.9;
-}
-
 .robot-teeth {
   position: absolute;
-  bottom: 0;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  white-space: nowrap;
+  display: flex; /* kinda centers with respect to each other */
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
-.robot-teeth-top {
-  top: 5px; 
+.robot-mouth {
+  width: 320px;            
+  height: 75px;           
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: red;        
+  opacity: 0.4;            
+  border-radius: 0 0 100px 100px / 0 0 60px 60px; 
+  /* display: flex; testing another way for centering... */
+  justify-content: center;
+  align-items: flex-start;
 }
 
+.robot-teeth-top,
 .robot-teeth-bottom {
-  bottom: 5px; 
+  display: flex;
+  gap: 5px;
 }
 
 .robot-tooth {
@@ -100,26 +107,24 @@
   background: white;
   border: 1px solid #ccc;
   display: inline-block;
-  margin: 0 2px; 
-  transform-origin: center; 
 }
 
 .robot-hair-style {
   position: absolute;
-  top: -30px;
+  top: 80px;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
+  z-index: 10;
 }
 
 .robot-hair-two,
 .robot-hair-three,
 .robot-hair-one {
-    width: 20px;
+  width: 20px;
   height: 40px;
   background: purple;
   border-radius: 50% 50% 0 0;
   display: inline-block;
   margin: 0 4px;
 }
-
